@@ -29,9 +29,19 @@ public class AccountTest {
     }
 
     @Test
-    public void depositAnAmoountToDecreaseBalance(){
+    public void withdrawAnAmoountToDecreaseBalance(){
         Account account = new Account();
-        account.deposit(-10);
+        account.withdraw(10);
         assertThat(account.balance()).isEqualTo(-10);
+    }
+
+    @Test
+    public void transferAmountBetweenTwoAccounts(){
+        Account accountA = new Account();
+        accountA.deposit(10);
+        Account accountB = new Account();
+        accountB.transfer(accountA, 10);
+        assertThat(accountA.balance()).isEqualTo(0);
+        assertThat(accountB.balance()).isEqualTo(10);
     }
 }
