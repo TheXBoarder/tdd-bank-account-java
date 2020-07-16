@@ -46,6 +46,7 @@ public class AccountTest {
     }
 
     @Test
+    @Disabled
     public void printBalanceSlipIncludingDateTime(){
 
     }
