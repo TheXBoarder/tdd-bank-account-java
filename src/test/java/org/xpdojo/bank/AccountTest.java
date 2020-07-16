@@ -44,4 +44,9 @@ public class AccountTest {
         assertThat(accountA.balance()).isEqualTo(0);
         assertThat(accountB.balance()).isEqualTo(10);
     }
+
+    @Test
+    public void printBalanceSlipIncludingDateTime(){
+
+    }
 }
