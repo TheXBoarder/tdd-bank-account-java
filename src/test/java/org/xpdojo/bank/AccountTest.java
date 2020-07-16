@@ -27,4 +27,11 @@ public class AccountTest {
         account.deposit(20);
         assertThat(account.balance()).isEqualTo(30);
     }
+
+    @Test
+    public void depositAnAmoountToDecreaseBalance(){
+        Account account = new Account();
+        account.deposit(-10);
+        assertThat(account.balance()).isEqualTo(-10);
+    }
 }
